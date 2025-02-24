@@ -46,6 +46,39 @@ This project provides functionality to format and verify UK postcodes. It includ
 
 3. The API will be available at `http://127.0.0.1:5100`.
 
+## API Endpoints
+
+### Format Postcode
+
+- **URL:** `/format/<postcode>`
+- **Method:** `GET`
+- **Response:**
+    ```json
+    {
+        "status": "success",
+        "formatted_postcode": "EC1A 1BB"
+    }
+    ```
+
+### Verify Postcode
+
+- **URL:** `/verify/<postcode>`
+- **Method:** `GET`
+- **Response:**
+    ```json
+    {
+        "status": "success",
+        "message": "Postcode is valid"
+    }
+    ```
+- **Error Response:**
+    ```json
+    {
+        "status": "error",
+        "message": "Error message"
+    }
+    ```
+
 ## Using the CLI
 
 1. To format a postcode:
@@ -99,37 +132,4 @@ This project provides functionality to format and verify UK postcodes. It includ
 1. Run the tests using Docker Compose:
     ```sh
     docker compose run web python -m unittest discover
-    ```
-
-## API Endpoints
-
-### Format Postcode
-
-- **URL:** `/format/<postcode>`
-- **Method:** `GET`
-- **Response:**
-    ```json
-    {
-        "status": "success",
-        "formatted_postcode": "EC1A 1BB"
-    }
-    ```
-
-### Verify Postcode
-
-- **URL:** `/verify/<postcode>`
-- **Method:** `GET`
-- **Response:**
-    ```json
-    {
-        "status": "success",
-        "message": "Postcode is valid"
-    }
-    ```
-- **Error Response:**
-    ```json
-    {
-        "status": "error",
-        "message": "Error message"
-    }
     ```

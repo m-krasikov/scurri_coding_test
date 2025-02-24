@@ -84,12 +84,12 @@ This project provides functionality to format and verify UK postcodes. It includ
 
 1. Build the Docker images:
     ```sh
-    docker-compose build
+    docker compose build
     ```
 
 2. Run the application:
     ```sh
-    docker-compose up -d
+    docker compose up -d
     ```
 
 3. The API will be available at `http://127.0.0.1:5100`.

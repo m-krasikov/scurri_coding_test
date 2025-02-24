@@ -98,7 +98,7 @@ This project provides functionality to format and verify UK postcodes. It includ
 
 1. Run the tests using Docker Compose:
     ```sh
-    docker-compose run app python -m unittest discover
+    docker compose run web python -m unittest discover
     ```
 
 ## API Endpoints
